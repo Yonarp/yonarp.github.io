@@ -8,17 +8,17 @@
 /* --------FONTS ------------------ */
 
 @font-face {
-    font-family: 'Ruhl';
+    font-family: "Ruhl";
     src: url(Fonts/FrankRuhlLibre-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Ruhl Medium';
+    font-family: "Ruhl Medium";
     src: url(Fonts/FrankRuhlLibre-Medium.ttf.ttf);
 }
 
 @font-face {
-    font-family: 'Vibes';
+    font-family: "Vibes";
     src: url(Fonts/GreatVibes-Regular.ttf);
 }
 
@@ -40,7 +40,7 @@ html {
 
 h1 {
     font-size: var(--header-1);
-    font-family: 'Vibes', sans-serif;
+    font-family: "Vibes", sans-serif;
 }
 
 h2 {
@@ -82,7 +82,7 @@ a {
 }
 
 body {
-    font-family: 'Ruhl', sans-serif;
+    font-family: "Ruhl", sans-serif;
     animation: opening 1s ease-in-out;
 }
 
@@ -144,6 +144,31 @@ nav {
     padding: 2rem 8rem;
     margin-bottom: 4rem;
     border: 3px solid black;
+    height: auto;
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.hero-introduction a::before {
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: black;
+    top: 100%;
+    left: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.hero-introduction a:hover::before {
+    transform: translateY(-100%);
+}
+
+.hero-introduction a:hover {
+    color: white;
 }
 
 .hero-images {
@@ -165,7 +190,6 @@ nav {
     left: -20%;
     z-index: -1;
     animation: plant-opening 1.5s ease-in-out forwards 0.5s, plant-animation 2.5s infinite ease alternate-reverse 2s;
-    ;
     transform: translateY(10%) rotateZ(10deg) rotateX(-90deg);
     transform-origin: bottom;
     max-height: 80%;
@@ -197,16 +221,16 @@ nav {
 }
 
 .about-text p {
-    font-size: calc((var(--text)/100)*80);
+    font-size: calc((var(--text) / 100) * 80);
 }
 
 .about-text h3 {
-    font-family: 'Ruhl Medium';
+    font-family: "Ruhl Medium";
     padding: 2rem 0rem;
 }
 
 .about-text h2 {
-    font-family: 'Vibes';
+    font-family: "Vibes";
     padding: 1rem;
 }
 
@@ -377,7 +401,7 @@ footer h4 {
         display: block;
     }
     .burger span {
-        padding: .2rem 2rem;
+        padding: 0.2rem 2rem;
         margin: 0.5rem 0rem;
         background: var(--gray-text);
         display: block;
