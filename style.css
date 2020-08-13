@@ -36,6 +36,7 @@ html {
     --special-color: #906272;
     --background-color: #414141;
     --gray-text: #525252;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -199,9 +200,9 @@ nav {
     left: 40%;
 }
 
-.burger,
-.menu-checkbox {
+.burger {
     display: none;
+    cursor: pointer;
 }
 
 
@@ -424,32 +425,19 @@ footer h4 {
         font-size: var(--header-4);
         text-decoration: underline;
     }
-    .menu-checkbox {
-        position: absolute;
-        display: block;
-        top: 50%;
-        right: 5%;
-        transform: translate(5%, -50%);
-        width: 5rem;
-        height: 5rem;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 100;
-    }
-    .menu-checkbox:checked+.nav-links {
+    .nav-open {
         transform: translate(-100%);
     }
-    .menu-checkbox:checked~.burger span {
+    .toggle .line-1 {
+        transform: rotateZ(45deg) translateY(300%);
         background: white;
     }
-    .menu-checkbox:checked~.burger span:nth-child(1) {
-        transform: rotateZ(45deg) translateY(300%);
-    }
-    .menu-checkbox:checked~.burger span:nth-child(2) {
+    .toggle .line-2 {
         opacity: 0;
     }
-    .menu-checkbox:checked~.burger span:nth-child(3) {
+    .toggle .line-3 {
         transform: rotateZ(-45deg) translateY(-300%);
+        background: white;
     }
     /*----------------------------------------------ABOUT SECTION------------------------------  */
     .about-text div {

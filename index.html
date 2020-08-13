@@ -9,34 +9,38 @@
         Mr.PICSY | Photographer
     </title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./icons/airplane.svg" />
 </head>
 
 <body>
     <header class="main-head">
+        <!-- -------------------------------------------------------NAV-BAR-------------------------------------------------------------- -->
         <nav>
             <h1 id="logo">
                 Mrs.Picsy
             </h1>
-            <input type="checkbox" class="menu-checkbox" />
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#about">Work</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="burger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
             </div>
         </nav>
     </header>
     <main>
+        <!-- -------------------------------------------------------HERO-SECTION-------------------------------------------------------------- -->
         <section class="hero">
             <div class="hero-introduction flex">
                 <h2>Mrs.Picsy <br />Photography</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore itaque corrupti culpa repellendus! Nemo, voluptatum?
                 </p>
+
+                <!-- only button here -->
                 <a href="#gallery">Gallery</a>
             </div>
             <div class="hero-images">
@@ -45,6 +49,7 @@
                 <img class="plant2 plant" src="/img/plant2.png" alt="" />
             </div>
         </section>
+        <!-- -------------------------------------------------------ABOUT-SECTION-------------------------------------------------------------- -->
         <section class="about" id="about">
             <div class="about-image">
                 <h5>MINIMAL</h5>
@@ -72,13 +77,14 @@
                 </div>
             </div>
         </section>
-        <div class="gallery">
+        <!-- -------------------------------------------------------IMAGE-SECTION-------------------------------------------------------------- -->
+        <div class="gallery" id="gallery">
             <img src="img/gallery-1.jpg" alt="man in suit" class="gallery-1" />
             <img src="img/gallery-2.jpg" alt="lady in white coat" class="gallery-2" />
             <img src="img/gallery-3.jpg" alt="lady in t-shirt" class="gallery-3" />
             <img src="img/gallery-4.jpg" alt="lady in jacket" class="gallery-4" />
         </div>
-
+        <!-- -------------------------------------------------------CONTACT-SECTION-------------------------------------------------------------- -->
         <section class="contact" id="contact">
             <div class="form-wrapper flex">
                 <h2>
@@ -98,7 +104,7 @@
         <h4>Mrs.Picsy &copy; 2020</h4>
         <ul>
             <li>
-                <a href="# "><img src="img/youtube-symbol 1.svg " alt="Youtube-lik " /></a>
+                <a href="# "><img src="img/youtube-symbol 1.svg " alt="Youtube-link " /></a>
             </li>
             <li>
                 <a href="# "><img src="img/twitter 1.svg " alt="Twitter-link " /></a>
@@ -108,6 +114,8 @@
             </li>
         </ul>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
