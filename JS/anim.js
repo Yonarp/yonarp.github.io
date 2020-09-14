@@ -1,4 +1,3 @@
-import "../node_modules/chart.js/dist/Chart.js";
 gsap.registerPlugin(ScrollTrigger);
 
 document.getElementById("jump-button-1").addEventListener("click", function() {
