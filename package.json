@@ -1,0 +1,23 @@
+{
+    "name": "natures",
+    "version": "1.0.0",
+    "description": "Infornative website about the risk of endagerment in the near future ",
+    "main": "main.js",
+    "dependencies": {
+        "chart.js": "^2.9.3"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Yonarp/Natures.git"
+    },
+    "author": "Pranoy",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Yonarp/Natures/issues"
+    },
+    "homepage": "https://github.com/Yonarp/Natures#readme"
+}

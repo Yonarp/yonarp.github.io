@@ -1,0 +1,42 @@
+/* -------------------  VARIABLES-------------------------------- */
+#temp-button {
+  z-index: 99;
+}
+
+/* ----Customising the scrollbar --------------- */
+::-webkit-scrollbar {
+  width: 1rem;
+  background: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  -webkit-box-shadow: 10px 10px 10px black;
+          box-shadow: 10px 10px 10px black;
+  border-radius: 2rem;
+  /* 5 */
+}
+
+/* ---------------------------------------------GSAP Animations classes triggeres --------------------------------------------- */
+.g-anim-1 {
+  display: inline-block;
+}
+
+.g-anim-2 {
+  position: relative;
+}
+
+.g-anim-2::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #212121;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+/*# sourceMappingURL=anims.css.map */

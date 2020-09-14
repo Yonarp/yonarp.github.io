@@ -4,118 +4,76 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Photographer available for wedinggs and other ocasions" />
-    <title>
-        Mr.PICSY | Photographer
-    </title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./icons/airplane.svg" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Oswald:wght@200;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 
 <body>
-    <header class="main-head">
-        <!-- -------------------------------------------------------NAV-BAR-------------------------------------------------------------- -->
-        <nav>
-            <h1 id="logo">
-                Mrs.Picsy
-            </h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <span class="line-1"></span>
-                <span class="line-2"></span>
-                <span class="line-3"></span>
-            </div>
-        </nav>
-    </header>
     <main>
-        <!-- -------------------------------------------------------HERO-SECTION-------------------------------------------------------------- -->
         <section class="hero">
-            <div class="hero-introduction flex">
-                <h2>Mrs.Picsy <br />Photography</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore itaque corrupti culpa repellendus! Nemo, voluptatum?
-                </p>
+            <div class="container">
+                <div class="image-container">
+                    <img src="Assets/mountain-background.png" alt="Mountains-view" class="mountain-background lax" data-lax-opacity="0 1, 250 1, 400 0" />
+                    <div class="overlay-black">ad</div>
+                    <img src="Assets/mountain.png" alt="Mountains-view" class="mountain lax" data-lax-translate-y="0 0 ,450 -400" data-lax-opacity="0 1, 500px 1, vh 0" />
+                    <div class="hero-text lax" data-lax-translate-y="0 0 ,500 100" data-lax-opacity="0 1, 300 1, 500 0">
+                        <h1>NATURE</h1>
+                        <a id="jump-button-1" class="lax" data-lax-opacity="0 1, 0 1, 50 0">Click on me </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- only button here -->
-                <a href="#gallery">Gallery</a>
-            </div>
-            <div class="hero-images">
-                <img class="hero-picsy" src="/img/elena-joy.png" alt="Picture of Mrs.Picsy" />
-                <img class="plant1 plant" src="/img/plant1.png" alt="" />
-                <img class="plant2 plant" src="/img/plant2.png" alt="" />
-            </div>
-        </section>
-        <!-- -------------------------------------------------------ABOUT-SECTION-------------------------------------------------------------- -->
-        <section class="about" id="about">
-            <div class="about-image">
-                <h5>MINIMAL</h5>
-                <img src="/img/about-image.png" alt="Potrait Picture" />
-            </div>
-            <div class="about-text flex">
-                <h2>Mrs.Picsy</h2>
-                <div class="about-life">
-                    <h3>My Life</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum similique, fugit odit architecto eos adipisci quibusdam et nobis exercitationem rem corporis iste, facilis est ea maxime sunt tempora, excepturi dolore.
+        <section class="graph-section">
+            <h1>extinction</h1>
+            <div class="graph-container flex-space">
+                <div class="graph-text">
+                    <h2 id="graph-heading">Nature&nbsp;Is&nbsp;Shrinking</h2>
+
+                    <p class="g-anim-2">
+                        The total number of known extinct species is 905 species. Most of them occurred during the 1900s. Estimate of the number of species is still unknown , ranging from three to ten million to the tens of millions, and many of them have been lost forever without
+                        being noticed by science. Therefore, the extinction rate may also be underestimated.
+                    </p>
+                    <input type="radio" name="graph-data" id="graph-button-extinction" checked />
+                    <label for="graph-button-extinction" class="labels">All</label>
+                    <input type="radio" name="graph-data" id="graph-button-animals" />
+                    <label for="graph-button-animals" class="labels">Animals</label>
+                    <input type="radio" name="graph-data" id="graph-button-plants" />
+                    <label for="graph-button-plants" class="labels">Plants</label>
                     </p>
                 </div>
-                <div class="about-Work">
-                    <h3>My Work</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum similique, fugit odit architecto eos adipisci quibusdam et nobis exercitationem rem corporis iste, facilis est ea maxime sunt tempora, excepturi dolore.
-                    </p>
-                </div>
-                <div class="about-contact">
-                    <h3>My Get in Touch</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum similique, fugit odit architecto eos adipisci quibusdam et nobis exercitationem rem corporis iste, facilis est ea maxime sunt tempora, excepturi dolore.
-                    </p>
+
+                <div class="graph">
+                    <canvas id="mygraph"></canvas>
                 </div>
             </div>
-        </section>
-        <!-- -------------------------------------------------------IMAGE-SECTION-------------------------------------------------------------- -->
-        <div class="gallery" id="gallery">
-            <img src="img/gallery-1.jpg" alt="man in suit" class="gallery-1" />
-            <img src="img/gallery-2.jpg" alt="lady in white coat" class="gallery-2" />
-            <img src="img/gallery-3.jpg" alt="lady in t-shirt" class="gallery-3" />
-            <img src="img/gallery-4.jpg" alt="lady in jacket" class="gallery-4" />
-        </div>
-        <!-- -------------------------------------------------------CONTACT-SECTION-------------------------------------------------------------- -->
-        <section class="contact" id="contact">
-            <div class="form-wrapper flex">
-                <h2>
-                    Get in <br />
-                    <span>Touch</span>
-                </h2>
-                <form>
-                    <label for=" email ">Your Email:</label>
-                    <input type="email " id="email required " />
-                    <button type="submit ">Submit</button>
-                </form>
-            </div>
-            <img src="img/contact-image.jpg " alt="Mrs.Picsy " />
         </section>
     </main>
-    <footer>
-        <h4>Mrs.Picsy &copy; 2020</h4>
-        <ul>
-            <li>
-                <a href="# "><img src="img/youtube-symbol 1.svg " alt="Youtube-link " /></a>
-            </li>
-            <li>
-                <a href="# "><img src="img/twitter 1.svg " alt="Twitter-link " /></a>
-            </li>
-            <li>
-                <a href="# "><img src="img/instagram 1.svg " alt="Instagram-link " /></a>
-            </li>
-        </ul>
-    </footer>
-
-    <script src="app.js"></script>
 </body>
+
+<!-- Intialising the JS plugin---------- -->
+
+<script src="https://cdn.jsdelivr.net/npm/lax.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.1/jump.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+<script type="module" src="/JS/main.js"></script>
+
+<script>
+    window.onload = function() {
+        lax.setup(); // init
+
+        const updateLax = () => {
+            lax.update(window.scrollY);
+            window.requestAnimationFrame(updateLax);
+        };
+
+        window.requestAnimationFrame(updateLax);
+    };
+</script>
 
 </html>

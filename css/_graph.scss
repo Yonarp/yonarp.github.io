@@ -1,0 +1,79 @@
+/* ------------------------------------Graph Section--------------------------- */
+
+.graph-section {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    & h1 {
+        color: $background-black;
+        background: $text-color-white;
+        text-transform: uppercase;
+        letter-spacing: 2rem;
+        font-weight: 400;
+        font-size: 8rem;
+        font-family: "Oswald", sans-serif;
+    }
+}
+
+.graph-container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.graph-text {
+    flex: 1 1 30rem;
+    text-align: left;
+    margin-right: 5rem;
+    & h2 {
+        margin-bottom: 2rem;
+        color: $text-color-green;
+    }
+    & p {
+        line-height: 3rem;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+input {
+    &[type="radio"] {
+        display: none;
+    }
+    &:checked+.labels::before {
+        top: 0;
+    }
+}
+
+.labels {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    border: 2px solid $text-color-green;
+    border-radius: 20%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 110%;
+        width: 110%;
+        background: $text-color-green;
+        top: 100%;
+        left: 0;
+        z-index: -1;
+        transition: all 0.3s;
+    }
+    &:hover {
+        box-shadow: 0 0 2px #fff, 0 0 10px $text-color-green;
+    }
+}
+
+.graph {
+    flex: 1 1 30rem;
+}
