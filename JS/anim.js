@@ -71,6 +71,7 @@ gsap
                 defaultFontColor: "#dcf0ff",
                 responsive: true,
                 maintainAspectRatio: false,
+                aspectRatio: 2,
                 responsiveAnimationDuration: 1000,
                 animation: {
                     duration: 1500,

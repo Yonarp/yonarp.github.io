@@ -77,3 +77,42 @@ input {
 .graph {
     flex: 1 1 30rem;
 }
+
+
+/* Responsiveness------------------------- */
+
+@media screen and (max-width: 600px) {
+    .graph-section {
+        & h1 {
+            letter-spacing: 1rem;
+            font-weight: 400;
+            font-size: 5rem;
+        }
+    }
+    .graph-text {
+        text-align: center;
+        margin-right: 0;
+        & h2 {
+            margin-bottom: 2rem;
+            color: $text-color-green;
+            font-size: 2rem;
+        }
+        & p {
+            line-height: 3rem;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    #mygraph {
+        height: 50%;
+        width: auto;
+    }
+    .radio-buttons {
+        text-align: center;
+    }
+    .graph {
+        position: relative;
+        height: 40vh;
+        width: auto;
+    }
+}
