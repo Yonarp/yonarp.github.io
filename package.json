@@ -3,9 +3,7 @@
     "version": "1.0.0",
     "description": "Infornative website about the risk of endagerment in the near future ",
     "main": "main.js",
-    "dependencies": {
-        "chart.js": "^2.9.3"
-    },
+    "dependencies": {},
     "devDependencies": {},
     "scripts": {
         "test": ""
