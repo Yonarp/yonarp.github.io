@@ -6,21 +6,37 @@ if (window.scrollTop) {
     flag = 0;
     // To make sure landing auto scroll only occurs once
 }
+const p = document.querySelector('p');
+const mouse = document.querySelector('.custom-cursor');
+const circleType1 = new CircleType(document.getElementById('Scroll-Text')).radius(120)
 
-document
-    .querySelector(".image-container")
-    .addEventListener("wheel", function(e) {
-        if (flag === 0) {
-            const delta = e.deltaY; // direction of mouse scroll
+// -------> custom cursor code here--------------//
+window.addEventListener('mousemove', e => {
+    mouse.style.top = e.pageY + 'px';
+    mouse.style.left = e.pageX + 'px';
 
-            if (delta > 0) {
-                // if mouse scrolls downwards then start the auto scroll
-                Jump(".graph-section", {
-                    duration: 3000,
-                });
-                flag++;
-            }
-        } else {
-            return;
-        }
-    });
+});
+
+p.addEventListener("mouseover", () => {
+    mouse.classList.add('cursor-effect-1');
+})
+
+p.addEventListener('mouseleave', () => {
+    mouse.classList.remove('cursor-effect-1');
+});
+
+
+document.getElementById('jump-button-1').addEventListener('click', () => {
+    console.log("the button was clicked we will now jump");
+});
+
+
+var isInViewport = function (elem) {
+	var distance = elem.getBoundingClientRect();
+	return (
+		distance.top >= 0 &&
+		distance.left >= 0 &&
+		distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+	);
+};

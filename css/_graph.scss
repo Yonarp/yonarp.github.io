@@ -61,8 +61,8 @@ input {
     &::before {
         content: "";
         position: absolute;
-        height: 110%;
-        width: 110%;
+        height: 130%;
+        width: 120%;
         background: $text-color-green;
         top: 100%;
         left: 0;
@@ -100,7 +100,7 @@ input {
         & p {
             line-height: 3rem;
             font-size: 1.1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
     }
     #mygraph {

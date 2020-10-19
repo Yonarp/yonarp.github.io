@@ -1,13 +1,26 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger); 
 
 document.getElementById("jump-button-1").addEventListener("click", function() {
-    jump(".graph-section", {
+    Jump(".graph-section", {
         duration: 2500,
     });
+    document.querySelector('body').classList.remove('stop-scrolling');
 });
+
+
 var ctx = document.getElementById("mygraph").getContext("2d");
 
-var chart = new Chart(ctx, {});
+var chart = new Chart(ctx, {});  // -----> creating the chart object so that we can place it later
+
+
+
+let animalButton = document.getElementById("graph-button-animals");
+let plantButton = document.getElementById("graph-button-plants");
+let allButton = document.getElementById("graph-button-extinction"); // These are the buttons which we use to update the graph data 
+
+
+
+// Below is to create the animation for the heading in Graph Section -----------------------//
 
 let graphText = document.querySelector("#graph-heading");
 
@@ -15,11 +28,7 @@ let graphTextContent = document.querySelector("#graph-heading").textContent;
 
 let graphTextArray = graphTextContent.split(""); // creating an Array of the each letter in the header
 
-let animalButton = document.getElementById("graph-button-animals");
-let plantButton = document.getElementById("graph-button-plants");
-let allButton = document.getElementById("graph-button-extinction");
-
-graphText.innerHTML = ""; // emptying the HTML because we will add new elements with classes and span tag from the ForEach
+graphText.innerHTML = ""; // emptying the HTML because we will add new elements with classes and span tag from the ForEach 
 
 graphTextArray.forEach(function(e, index) {
     let newClass = document.createElement("span");
@@ -27,6 +36,8 @@ graphTextArray.forEach(function(e, index) {
     newClass.innerHTML = e;
     graphText.appendChild(newClass);
 });
+
+// We create the animation through gsap and using .then create the chart through chart.js-------------//
 
 gsap
     .from(".g-anim-1", {
@@ -95,7 +106,7 @@ gsap
                 },
             },
         });
-    });
+    }); // chart is created 
 
 let rule = CSSRulePlugin.getRule(".g-anim-2::before");
 
@@ -153,4 +164,12 @@ plantButton.addEventListener("click", () => {
 allButton.addEventListener("click", () => {
     chartUpdate("All");
     console.log("got clicked");
+});
+
+gsap.from('.radio-buttons' ,{
+    scrollTrigger: '#graph-heading',
+    opacity: 0,
+    y: 10,
+    delay: 1,
+
 });
