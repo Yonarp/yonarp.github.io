@@ -10,6 +10,10 @@ const p = document.querySelector('p');
 const mouse = document.querySelector('.custom-cursor');
 const circleType1 = new CircleType(document.getElementById('Scroll-Text')).radius(120)
 
+if(window.innerWidth <= 440){
+    circleType1.radius(90);
+}
+
 // -------> custom cursor code here--------------//
 window.addEventListener('mousemove', e => {
     mouse.style.top = e.pageY + 'px';

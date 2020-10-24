@@ -426,5 +426,14 @@ a {
   .mountain {
     height: 180%;
   }
+  .scroll-button {
+    bottom: 5%;
+  }
+  #jump-button-1 {
+    font-size: 1rem;
+  }
+  #Scroll-Text {
+    font-size: .8rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
