@@ -50,17 +50,43 @@
     position: absolute;
     border-radius: 50%;
     border: 1px solid $text-color-white;
+    background: $text-color-white;
     pointer-events: none;
+    transform-origin: center;
     transform: translate(-50%, -50%);
     transition: all 0.3s;
-    transition-property: border, border-radius;
-    z-index: 1;
+    transition: background 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: border, border-radius, transform , background;
+    z-index: -1;
+    &-follower{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid $text-color-green;
+        pointer-events: none;
+        transform: translate(-50% ,-50%);
+        transition: all 0.3s;
+        z-index: -1;
+    }
 }
 
 .cursor-effect-1 {
     border-radius: 1px;
+    background: none;
     border: none;
     border-left: 3px solid $text-color-green;
+}
+
+.cursor-effect-2{
+    transform: scale(12);
+    background: black;
+    border: .1px  $text-color-white;
+}
+
+.cursor-expand{
+    animation: expand .3s forwards;
+    transform-origin: center;
 }
 
 
@@ -73,5 +99,16 @@
 
     to{
         transform: rotate(360deg);
+    }
+}
+
+@keyframes expand{
+    from{
+        transform: scale(1) translate(-50%,-50%);
+    }
+
+    to{
+        transform: scale(3);
+        opacity: 0;
     }
 }

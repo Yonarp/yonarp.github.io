@@ -198,20 +198,56 @@ input:checked + .labels::before {
   position: absolute;
   border-radius: 50%;
   border: 1px solid #dcf0ff;
+  background: #dcf0ff;
+  pointer-events: none;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition: background 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition-property: border, border-radius, background, -webkit-transform;
+  transition-property: border, border-radius, background, -webkit-transform;
+  transition-property: border, border-radius, transform , background;
+  transition-property: border, border-radius, transform , background, -webkit-transform;
+  z-index: -1;
+}
+
+.custom-cursor-follower {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #3bb78f;
   pointer-events: none;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  -webkit-transition-property: border, border-radius;
-  transition-property: border, border-radius;
-  z-index: 1;
+  z-index: -1;
 }
 
 .cursor-effect-1 {
   border-radius: 1px;
+  background: none;
   border: none;
   border-left: 3px solid #3bb78f;
+}
+
+.cursor-effect-2 {
+  -webkit-transform: scale(12);
+          transform: scale(12);
+  background: black;
+  border: 0.1px #dcf0ff;
+}
+
+.cursor-expand {
+  -webkit-animation: expand .3s forwards;
+          animation: expand .3s forwards;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 /* ---------------------------Keyframes Animations----------------------- */
@@ -233,6 +269,30 @@ input:checked + .labels::before {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes expand {
+  from {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes expand {
+  from {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0;
   }
 }
 
@@ -427,7 +487,7 @@ a {
     height: 180%;
   }
   .scroll-button {
-    bottom: 10%;
+    bottom: 5%;
   }
   #jump-button-1 {
     font-size: 1rem;
